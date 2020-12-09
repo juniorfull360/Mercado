@@ -1,90 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedidos</title>
+    <title>Lista de Compras</title>
 
-    <style type="text/css">
-        
-        .conteudo{
-            max-width: 400px;
-            max-height: 600px;
-            margin: auto;
-            background: #f3f3f3;
-            border-radius: 25px;
-            border: 2px solid #385c07;
-            padding: 20px; 
-            width: 400px;
-            height: 500px;
-            position: relative;
-        }
-
-        .conteudo h1{
-            text-align: center;
-        }
-
-        input[type="text"]{
-            width: 100%;
-            height: 30px;
-            margin-bottom: 10px;
-        }
-
-        input[type="button"]{
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 10px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            position: absolute;
-            top: 27%;
-            right: 33%;
-        }
-
-        input[type="button"]:hover{
-            background: rgb(3, 88, 3);
-        }
-        
-        button1:hover{
-            background: rgb(90, 90, 90);
-            
-        }
-
-        button1{
-            background-color: rgb(255, 255, 255);
-            padding: 2px 5px;
-            float: right;
-            border-style: ridge;
-            border-width: 3px;
-        }
-
-            button, input[type=button]{ cursor: pointer;}
-            button1, input[type=button]{ cursor: pointer;}
-
-        ul{
-            margin-top: 10%;
-            list-style-type: none;
-            padding: 10px;
-            height: 250px;
-            background: #f3f3f3;
-            overflow-y: auto;
-            padding-inline-start: 3%;
-            padding-inline: 10%;
-
-        }
-
-        li{
-            height: 40px;
-            margin: 15px 0 15px 0;
-            border-bottom: 1px solid;
-        }
-
-    </style>
+    
+    <link rel="stylesheet" type="text/css" href="estilo.css"/>
 
 </head>
 <body>
@@ -92,7 +14,7 @@
     <div class="conteudo">
         <div class="row">
             <div class="col-12">
-                <h1>Super Mercado</h1>
+                <h1>Lista de Compras</h1>
                     <form action="">
                         <input type="text" name="task" id="task" placeholder="Novo Item...">
                         <input type="button"
@@ -113,50 +35,7 @@
         </div>
     </div>
 
-<script type="text/javascript">
-    
-    var ul = document.getElementById("Lista")
-    var li
-    var itemId
-    var item
-   
-    adicionarItem = function (){
-        
-        if(document.getElementById("task").value != ""){
-            
-            item    = document.getElementById("task")
-            itemId  = ul.childElementCount
-            li      = criarItem(item.value, itemId)
-            li.appendChild(criarButton(itemId))
-            ul.appendChild(li)
-            item.value = ""
-
-        }
-    }
-
-    removerItem = function (itemId){
-        for( i = 0 ; i < ul.children.length ; i++){
-            if(ul.children[i].getAttribute("index") == itemId){
-                ul.children[i].remove()
-            }
-        }
-    }
-
-    criarItem = function (itemValue, itemId){
-        let li = document.createElement("li")
-        li.setAttribute("index", itemId)
-        li.appendChild(document.createTextNode(itemValue))
-        return li
-    }
-
-    criarButton = function (itemId){
-        let btn = document.createElement("button1")
-        btn.setAttribute("onclick", "removerItem("+itemId+")") 
-        btn.innerHTML ="X"
-        return btn
-    }
-
-</script>
+    <script type="text/javascript" src="funcoes.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,90 @@
+.conteudo{
+    max-width: 400px;
+    max-height: 600px;
+    margin: auto;
+    background: #f3f3f3;
+    border-radius: 25px;
+    border: 2px solid #385c07;
+    padding: 20px; 
+    width: 400px;
+    height: 500px;
+    position: relative;
+}
+
+.conteudo h1{
+    text-align: center;
+}
+
+input[type="text"]{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+input[type="button"]{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: absolute;
+    top: 27%;
+    right: 33%;
+}
+
+input[type="button"]:hover{
+    background: rgb(3, 88, 3);
+}
+
+
+button1{
+    box-shadow: 3px 4px 0px 0px #8a2a21;
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	background-color:#c62d1f;
+	border-radius:18px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:5px 20px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+button1:hover{
+    background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+	background-color:#f24437;
+}
+button:active{
+    position:relative;
+	top:1px;
+    
+}
+
+    button, input[type=button]{ cursor: pointer;}
+    button1, input[type=button]{ cursor: pointer;}
+
+ul{
+    margin-top: 10%;
+    list-style-type: none;
+    padding: 10px;
+    height: 250px;
+    background: #f3f3f3;
+    overflow-y: auto;
+    padding-inline-start: 3%;
+    padding-inline: 10%;
+    font-size: 18px;
+    font-family: fantasy;
+}
+
+li{
+    height: 40px;
+    margin: 15px 0 15px 0;
+    border-bottom: 1px solid;
+}
